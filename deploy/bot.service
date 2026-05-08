@@ -1,0 +1,17 @@
+[Unit]
+Description=Smplat Telegram Bot Service
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=<your-linux-user>
+WorkingDirectory=/home/<your-linux-user>/smplat/bot
+ExecStart=/home/<your-linux-user>/smplat/bot/venv/bin/python app.py
+Restart=on-failure
+RestartSec=5s
+Environment="PYTHONUNBUFFERED=1"
+Environment="ENV_FILE=/home/<your-linux-user>/smplat/bot/.env"
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,252 @@
+# 📋 Checklist Развития Софтмонтаж
+
+## 🎯 Текущая фаза: Backend API endpoints
+
+### User endpoints
+- [ ] `POST /api/users` — Создание нового пользователя
+- [ ] `GET /api/users/{id}` — Получить пользователя
+- [ ] `GET /api/users/telegram/{telegram_id}` — Получить по Telegram ID
+- [ ] `PUT /api/users/{id}` — Обновить пользователя
+- [ ] `DELETE /api/users/{id}` — Удалить пользователя
+- [ ] `POST /api/auth/login` — Вход (для веб)
+- [ ] `POST /api/auth/logout` — Выход
+- [ ] `GET /api/auth/me` — Текущий пользователь
+
+### Project endpoints
+- [ ] `POST /api/projects` — Создать проект
+- [ ] `GET /api/projects` — Список проектов (с фильтрацией)
+- [ ] `GET /api/projects/{id}` — Получить проект
+- [ ] `PUT /api/projects/{id}` — Обновить проект
+- [ ] `DELETE /api/projects/{id}` — Удалить проект
+- [ ] `GET /api/projects/{id}/tasks` — Задачи проекта
+- [ ] `GET /api/projects/{id}/quotes` — Сметы проекта
+
+### Task endpoints
+- [ ] `POST /api/tasks` — Создать задачу
+- [ ] `GET /api/tasks` — Список задач (с фильтрацией, пагинацией)
+- [ ] `GET /api/tasks/{id}` — Получить задачу
+- [ ] `PUT /api/tasks/{id}` — Обновить задачу
+- [ ] `DELETE /api/tasks/{id}` — Удалить задачу
+- [ ] `PATCH /api/tasks/{id}/status` — Изменить статус
+- [ ] `GET /api/tasks/{id}/quotes` — Предложения по задаче
+
+### Quote endpoints
+- [ ] `POST /api/quotes` — Создать смету
+- [ ] `GET /api/quotes` — Список смет
+- [ ] `GET /api/quotes/{id}` — Получить смету по ID
+- [ ] `GET /api/quotes/uuid/{uuid}` — Получить смету по UUID
+- [ ] `PUT /api/quotes/{id}` — Обновить смету
+- [ ] `DELETE /api/quotes/{id}` — Удалить смету
+- [ ] `PATCH /api/quotes/{id}/status` — Изменить статус (accept/reject)
+
+### Backend utilities
+- [ ] Аутентификация (JWT tokens)
+- [ ] Авторизация (role-based access control)
+- [ ] Error handling и exceptions
+- [ ] Request validation (Pydantic)
+- [ ] Database migrations (Alembic)
+- [ ] Unit tests
+- [ ] Integration tests
+
+## 🎨 Frontend Development
+
+### Auth pages
+- [ ] Login page
+- [ ] Register page
+- [ ] Forgot password
+- [ ] Email verification
+
+### Main pages
+- [ ] Tasks list page (with filters, sorting, pagination)
+- [ ] Task detail page
+- [ ] Create/Edit task forms
+- [ ] Projects list page
+- [ ] Project detail page
+- [ ] Create/Edit project forms
+- [ ] Quotes list page
+- [ ] Quote detail page
+- [ ] Create/Edit quote forms
+
+### Components
+- [ ] Form components (Input, Select, Textarea)
+- [ ] Table component (with sorting)
+- [ ] Pagination component
+- [ ] Modal component
+- [ ] Toast notifications
+- [ ] Loading spinner
+- [ ] Error boundary
+
+### Features
+- [ ] User authentication (login/logout)
+- [ ] Token refresh (if token expired)
+- [ ] Form validation
+- [ ] API error handling
+- [ ] Loading states
+- [ ] Empty states
+- [ ] Success notifications
+
+## 🤖 Bot Integration
+
+### API Client improvements
+- [ ] Error handling
+- [ ] Retry logic
+- [ ] Timeout handling
+- [ ] Rate limiting
+
+### Handlers simplification
+- [ ] Remove duplicate logic
+- [ ] Integrate with backend
+- [ ] Proper error messages to users
+- [ ] Notification sending
+
+### Features
+- [ ] Create task from Telegram
+- [ ] View task status
+- [ ] Receive notifications
+- [ ] Get quotes
+- [ ] Accept/reject offers
+
+## 📱 UI/UX Polish
+
+### Responsive design
+- [ ] Mobile optimization
+- [ ] Tablet support
+- [ ] Desktop optimization
+- [ ] Dark mode (optional)
+
+### Accessibility
+- [ ] ARIA labels
+- [ ] Keyboard navigation
+- [ ] Color contrast
+- [ ] Screen reader support
+
+### Performance
+- [ ] Image optimization
+- [ ] Code splitting
+- [ ] Lazy loading
+- [ ] Caching strategy
+
+## 📊 Adapterisation для Софтмонтаж
+
+### Content
+- [ ] Update company info (logo, colors, contacts)
+- [ ] Update descriptions (from ЖКХ to слаботочные системы)
+- [ ] Translate interface terms
+- [ ] Add company-specific features
+
+### Branding
+- [ ] Logo in UI
+- [ ] Color scheme (blue primary?)
+- [ ] Typography
+- [ ] Icons
+
+### Features
+- [ ] Material/Equipment tracking (optional)
+- [ ] Technical documentation
+- [ ] Compliance/Standards (optional)
+- [ ] Custom reports
+
+## 🧪 Testing
+
+### Backend tests
+- [ ] Unit tests for services
+- [ ] Integration tests for API endpoints
+- [ ] Database tests
+- [ ] Authentication tests
+- [ ] Authorization tests
+
+### Frontend tests
+- [ ] Component tests
+- [ ] Integration tests
+- [ ] E2E tests
+- [ ] Performance tests
+
+## 📦 Deployment
+
+### Backend
+- [ ] Docker configuration
+- [ ] Environment variables for production
+- [ ] Database migrations for production
+- [ ] Logging configuration
+- [ ] Error tracking (Sentry, etc)
+
+### Frontend
+- [ ] Build optimization
+- [ ] Environment variables for production
+- [ ] CDN configuration (optional)
+- [ ] Analytics tracking (optional)
+
+### Bot
+- [ ] Docker configuration
+- [ ] Webhook configuration
+- [ ] Polling configuration
+- [ ] Error handling
+
+### Infrastructure
+- [ ] Docker Compose setup
+- [ ] CI/CD pipeline (GitHub Actions)
+- [ ] Database backups
+- [ ] Monitoring & alerts
+
+## 📖 Documentation
+
+### Code documentation
+- [ ] API documentation (auto-generated by FastAPI)
+- [ ] Frontend component documentation
+- [ ] Bot handlers documentation
+- [ ] Database schema documentation
+
+### User documentation
+- [ ] User guide (РУ, КК versions)
+- [ ] Admin guide
+- [ ] API documentation for integrations
+- [ ] FAQ
+
+### Developer documentation
+- [ ] Setup guide (QUICKSTART.md ✓)
+- [ ] Architecture decisions
+- [ ] Code style guide
+- [ ] Contributing guide
+
+## 🚀 Launch checklist
+
+### Pre-launch
+- [ ] All endpoints tested
+- [ ] All pages responsive
+- [ ] Security audit
+- [ ] Performance testing
+- [ ] User acceptance testing (UAT)
+
+### Launch
+- [ ] Production database created
+- [ ] Backups configured
+- [ ] Monitoring configured
+- [ ] Support team trained
+- [ ] Announcement prepared
+
+### Post-launch
+- [ ] Monitor for errors
+- [ ] Collect user feedback
+- [ ] Plan improvements
+- [ ] Track metrics
+
+---
+
+## 📈 Priority & Effort Matrix
+
+| Task | Priority | Effort | Status |
+|------|----------|--------|--------|
+| Backend basic endpoints | 🔴 High | 🔴 5d | Not started |
+| Frontend pages | 🔴 High | 🟠 7d | Not started |
+| Authentication | 🔴 High | 🟠 3d | Not started |
+| Bot integration | 🟠 Medium | 🟠 3d | Not started |
+| Testing | 🟠 Medium | 🔴 5d | Not started |
+| Documentation | 🟡 Low | 🟡 2d | In progress |
+| Deployment | 🟠 Medium | 🔴 5d | Not started |
+| Branding | 🟡 Low | 🟡 2d | Not started |
+
+---
+
+**Созданно**: 8 мая 2026 г.
+**Версия**: 1.0
+**Адреса**: https://github.com/Softmontazh/smplat
